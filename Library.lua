@@ -6,8 +6,8 @@ local Mouse = game.Players.LocalPlayer:GetMouse()
 
 local Blacklist = {Enum.KeyCode.Unknown, Enum.KeyCode.CapsLock, Enum.KeyCode.Escape, Enum.KeyCode.Tab, Enum.KeyCode.Return, Enum.KeyCode.Backspace, Enum.KeyCode.Space, Enum.KeyCode.W, Enum.KeyCode.A, Enum.KeyCode.S, Enum.KeyCode.D}
 
-if CoreGui:FindFirstChild("Shaman") then
-    CoreGui.Shaman:Destroy()
+if CoreGui:FindFirstChild("V1trixz") then
+    CoreGui.V1trixz:Destroy()
     CoreGui.Tooltips:Destroy()
 end
 
@@ -52,7 +52,7 @@ local getcustomasset = getcustomasset or getsynasset
 local isfolder = isfolder or syn_isfolder or is_folder
 local makefolder = makefolder or make_folder or createfolder or create_folder
 
-if not isfolder("Shaman") then
+if not isfolder("V1trixz") then
 local download = Instance.new("ScreenGui")
 download.Name = "Download"
 download.Enabled = true
@@ -123,34 +123,34 @@ dText.Position = UDim2.new(0.00132, 0, 0.39, 0)
 dText.Size = UDim2.new(0, 284, 0, 46)
 dText.Parent = dMain
     
-makefolder("Shaman")
+makefolder("V1trixz")
     
 local Circle = request({Url = "https://raw.githubusercontent.com/Rain-Design/Icons/main/Circle.png", Method = "GET"})
-writefile("Shaman/Circle.png", Circle.Body)
+writefile("V1trixz/Circle.png", Circle.Body)
 dText.Text = "Downloaded: Circle.png"
     
 local ColorDropper = request({Url = "https://raw.githubusercontent.com/Rain-Design/Icons/main/ColorDropper.png", Method = "GET"})
-writefile("Shaman/ColorDropper.png", ColorDropper.Body)
+writefile("V1trixz/ColorDropper.png", ColorDropper.Body)
 dText.Text = "Downloaded: ColorDropper.png"
 
 local Close = request({Url = "https://raw.githubusercontent.com/Rain-Design/Icons/main/Close.png", Method = "GET"})
-writefile("Shaman/Close.png", Close.Body)
+writefile("V1trixz/Close.png", Close.Body)
 dText.Text = "Downloaded: Close.png"
 
 local CollapseArrow = request({Url = "https://raw.githubusercontent.com/Rain-Design/Icons/main/CollapseArrow.png", Method = "GET"})
-writefile("Shaman/CollapseArrow.png", CollapseArrow.Body)
+writefile("V1trixz/CollapseArrow.png", CollapseArrow.Body)
 dText.Text = "Downloaded: CollapseArrow.png"
     
 local RadioButton = request({Url = "https://raw.githubusercontent.com/Rain-Design/Icons/main/RadioButton.png", Method = "GET"})
-writefile("Shaman/RadioButton.png", RadioButton.Body)
+writefile("V1trixz/RadioButton.png", RadioButton.Body)
 dText.Text = "Downloaded: RadioButton.png"
     
 local RadioOuter = request({Url = "https://raw.githubusercontent.com/Rain-Design/Icons/main/RadioOuter.png", Method = "GET"})
-writefile("Shaman/RadioOuter.png", RadioOuter.Body)
+writefile("V1trixz/RadioOuter.png", RadioOuter.Body)
 dText.Text = "Downloaded: RadioOuter.png"
     
 local RadioInner = request({Url = "https://raw.githubusercontent.com/Rain-Design/Icons/main/RadioInner.png", Method = "GET"})
-writefile("Shaman/RadioInner.png", RadioInner.Body)
+writefile("V1trixz/RadioInner.png", RadioInner.Body)
 dText.Text = "Downloaded: RadioInner.png"
 
 download:Destroy()
@@ -163,13 +163,13 @@ function library:GetXY(GuiObject)
 end
 
 function library:Window(Info)
-Info.Text = Info.Text or "Shaman"
+Info.Text = Info.Text or "V1trixz"
 
 local window = {}
 
-local shamanScreenGui = Instance.new("ScreenGui")
-shamanScreenGui.Name = "Shaman"
-shamanScreenGui.Parent = CoreGui
+local v1trixzScreenGui = Instance.new("ScreenGui")
+v1trixzScreenGui.Name = "V1trixz"
+v1trixzScreenGui.Parent = CoreGui
 
 local tooltipScreenGui = Instance.new("ScreenGui")
 tooltipScreenGui.Name = "Tooltips"
@@ -252,7 +252,7 @@ main.BorderSizePixel = 0
 main.ClipsDescendants = true
 main.Position = UDim2.new(0.361, 0, 0.308, 0)
 main.Size = UDim2.new(0, 450, 0, 321)
-main.Parent = shamanScreenGui
+main.Parent = v1trixzScreenGui
 
 local uICorner = Instance.new("UICorner")
 uICorner.Name = "UICorner"
@@ -302,7 +302,6 @@ UserInputService.InputChanged:Connect(function(input)
     end
 end)
 
-
 local uICorner1 = Instance.new("UICorner")
 uICorner1.Name = "UICorner"
 uICorner1.Parent = topbar
@@ -350,7 +349,7 @@ textLabel.Parent = topbar
 
 local closeButton = Instance.new("ImageButton")
 closeButton.Name = "CloseButton"
-closeButton.Image = getcustomasset("Shaman/Close.png")
+closeButton.Image = getcustomasset("V1trixz/Close.png")
 closeButton.ImageColor3 = Color3.fromRGB(237, 237, 237)
 closeButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 closeButton.BackgroundTransparency = 1
@@ -360,7 +359,7 @@ closeButton.ZIndex = 2
 closeButton.Parent = topbar
 
 closeButton.MouseButton1Click:Once(function()
-    shamanScreenGui:Destroy()
+    v1trixzScreenGui:Destroy()
     tooltipScreenGui:Destroy()
 end)
 
@@ -418,7 +417,7 @@ end)
 
 local editButton = Instance.new("ImageButton")
 editButton.Name = "EditButton"
-editButton.Image = getcustomasset("Shaman/ColorDropper.png")
+editButton.Image = getcustomasset("V1trixz/ColorDropper.png")
 editButton.ImageColor3 = Color3.fromRGB(237, 237, 237)
 editButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 editButton.BackgroundTransparency = 1
@@ -441,7 +440,7 @@ uiGradient.Color = ColorSequence.new{
 uiGradient.Parent = editButton
 
 task.spawn(function()
-    while wait() do -- skidded from devforum
+    while wait() do
     if uiGradient.Enabled then
 	local loop = tick() % 2 / 2
 	colors = {}
@@ -600,7 +599,7 @@ textLabel1.Parent = tabFrame
 
 local uIStroke = Instance.new("UIStroke")
 uIStroke.Name = "UIStroke"
-uIStroke.Color = Color3.fromRGB(68, 68, 68) -- 183, 248, 219
+uIStroke.Color = Color3.fromRGB(68, 68, 68)
 uIStroke.Transparency = 0.45
 uIStroke.Parent = tabFrame
 
@@ -787,8 +786,6 @@ sectionIcon.Parent = section
 
 sectionButton.MouseButton1Click:Connect(function()
     Closed.Value = not Closed.Value
-    --#d96163
-    
     
     TweenService:Create(section, TweenInfo.new(.1, Enum.EasingStyle.Linear, Enum.EasingDirection.In), {Size = Closed.Value and UDim2.new(0, 162, 0, SizeY + 4) or UDim2.new(0, 162, 0, 27)}):Play()
     TweenService:Create(sectionFrame, TweenInfo.new(.1, Enum.EasingStyle.Linear, Enum.EasingDirection.In), {Size = Closed.Value and UDim2.new(0, 162, 0, SizeY) or UDim2.new(0, 162, 0, 23)}):Play()
@@ -1025,7 +1022,7 @@ inputFrame.Parent = input
 local inputOuter = Instance.new("Frame")
 inputOuter.Name = "InputOuter"
 inputOuter.AnchorPoint = Vector2.new(0.5, 0.5)
-inputOuter.BackgroundColor3 = Color3.fromRGB(68, 68, 68)
+inputOuter.BackgroundColor3 = Color3.fromRGB(62, 62, 62)
 inputOuter.BorderSizePixel = 0
 inputOuter.ClipsDescendants = true
 inputOuter.Position = UDim2.new(0.5, 0, 0.5, 0)
@@ -1135,7 +1132,7 @@ toggleUICorner.Parent = toggleFrame
 
 local circleIcon = Instance.new("ImageLabel")
 circleIcon.Name = "CheckIcon"
-circleIcon.Image = getcustomasset("Shaman/Circle.png")
+circleIcon.Image = getcustomasset("V1trixz/Circle.png")
 circleIcon.ImageColor3 = Color3.fromRGB(217, 217, 217)
 circleIcon.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 circleIcon.BackgroundTransparency = 1
@@ -1282,7 +1279,7 @@ local MaxSize = 1
 local SizeFromScale = (MinSize +  (MaxSize - MinSize)) * DefaultScale
 SizeFromScale = SizeFromScale - (SizeFromScale % 2)
 
-sliderButton.MouseButton1Down:Connect(function() -- Skidded from material ui hehe, sorry
+sliderButton.MouseButton1Down:Connect(function()
 	local MouseMove, MouseKill
 	MouseMove = Mouse.Move:Connect(function()
 		local Px = library:GetXY(outerSlider)
@@ -1356,7 +1353,7 @@ dropdownText.Parent = dropdown
 
 local dropdownIcon = Instance.new("ImageLabel")
 dropdownIcon.Name = "DropdownIcon"
-dropdownIcon.Image = getcustomasset("Shaman/CollapseArrow.png")
+dropdownIcon.Image = getcustomasset("V1trixz/CollapseArrow.png")
 dropdownIcon.ImageColor3 = Color3.fromRGB(191, 191, 191)
 dropdownIcon.AnchorPoint = Vector2.new(1, 0)
 dropdownIcon.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
@@ -1516,334 +1513,4 @@ dropdownButton.MouseButton1Click:Connect(function()
     TweenService:Create(dropdown, TweenInfo.new(.15, Enum.EasingStyle.Linear, Enum.EasingDirection.In), {Size = DropdownOpened and UDim2.new(0, 162, 0, DropdownYSize) or UDim2.new(0, 162, 0, 27)}):Play()
     TweenService:Create(dropdownContainer, TweenInfo.new(.15, Enum.EasingStyle.Linear, Enum.EasingDirection.In), {Size = DropdownOpened and UDim2.new(0, 162, 0, DropdownYSize) or UDim2.new(0, 162, 0, 27)}):Play()
     TweenService:Create(dropdownContainer, TweenInfo.new(.15, Enum.EasingStyle.Linear, Enum.EasingDirection.In), {BackgroundTransparency = DropdownOpened and .96 or 1}):Play()
-    TweenService:Create(sectionFrame, TweenInfo.new(.15, Enum.EasingStyle.Linear, Enum.EasingDirection.In), {Size = DropdownOpened and UDim2.new(0, 162, 0, sectionFrame.Size.Y.Offset + DropdownYSize - 27) or UDim2.new(0, 162, 0, sectionFrame.Size.Y.Offset - DropdownYSize + 27)}):Play()
-    TweenService:Create(section, TweenInfo.new(.15, Enum.EasingStyle.Linear, Enum.EasingDirection.In), {Size = DropdownOpened and UDim2.new(0, 162, 0, sectionFrame.Size.Y.Offset + DropdownYSize - 27 + 4) or UDim2.new(0, 162, 0, sectionFrame.Size.Y.Offset - DropdownYSize + 31)}):Play()
-end)
-
-return insidedropdown
-end
-
-function sectiontable:RadioButton(Info)
-Info.Text = Info.Text or "Radio Button"
-Info.Options = Info.Options or {}
-Info.Flag = Info.Flag or nil
-Info.Callback = Info.Callback or function() end
-Info.Tooltip = Info.Tooltip or ""
-Info.Default = Info.Default or nil
-
-local RadioOpened = false
-
-RadioYSize = 27
-
-if Info.Default ~= nil then
-    task.spawn(function()
-        pcall(Info.Callback, Info.Default)
-    end)
-    if Info.Flag ~= nil then
-        library.Flags[Info.Flag] = Info.Default
-	end
-end
-
-local insideradio = {}
-
-local radioButton = Instance.new("Frame")
-radioButton.Name = "RadioButton"
-radioButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-radioButton.BackgroundTransparency = 1
-radioButton.Size = UDim2.new(0, 162, 0, 27)
-radioButton.Parent = sectionFrame
-
-if Info.Tooltip ~= "" then
-    AddTooltip(radioButton, Info.Tooltip)
-end
-
-local button = Instance.new("Frame")
-button.Name = "Button"
-button.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-button.BackgroundTransparency = 1
-button.Size = UDim2.new(0, 162, 0, 27)
-button.Parent = radioButton
-
-local radioButtonTextButton = Instance.new("TextButton")
-radioButtonTextButton.Name = "RadioButtonTextButton"
-radioButtonTextButton.Font = Enum.Font.SourceSans
-radioButtonTextButton.Text = ""
-radioButtonTextButton.TextColor3 = Color3.fromRGB(0, 0, 0)
-radioButtonTextButton.TextSize = 14
-radioButtonTextButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-radioButtonTextButton.BackgroundTransparency = 1
-radioButtonTextButton.Size = UDim2.new(0, 162, 0, 27)
-radioButtonTextButton.Parent = button
-
-local radioButtonText = Instance.new("TextLabel")
-radioButtonText.Name = "RadioButtonText"
-radioButtonText.Font = Enum.Font.GothamBold
-radioButtonText.Text = Info.Text
-radioButtonText.TextColor3 = Color3.fromRGB(217, 217, 217)
-radioButtonText.TextSize = 11
-radioButtonText.TextXAlignment = Enum.TextXAlignment.Left
-radioButtonText.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-radioButtonText.BackgroundTransparency = 1
-radioButtonText.Position = UDim2.new(0.0488, 0, 0, 0)
-radioButtonText.Size = UDim2.new(0, 156, 0, 27)
-radioButtonText.Parent = button
-
-local radioButtonIcon = Instance.new("ImageLabel")
-radioButtonIcon.Name = "RadioButtonIcon"
-radioButtonIcon.Image = getcustomasset("Shaman/CollapseArrow.png")
-radioButtonIcon.AnchorPoint = Vector2.new(1, 0)
-radioButtonIcon.ImageColor3 = Color3.fromRGB(191, 191, 191)
-radioButtonIcon.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-radioButtonIcon.BackgroundTransparency = 1
-radioButtonIcon.Rotation = -90
-radioButtonIcon.BorderSizePixel = 0
-radioButtonIcon.Position = UDim2.new(0, 155, 0, 7)
-radioButtonIcon.Size = UDim2.new(0, 13, 0, 13)
-radioButtonIcon.Parent = button
-
-local radioButtonIcon2 = Instance.new("ImageLabel")
-radioButtonIcon2.Name = "RadioButtonIcon2"
-radioButtonIcon2.Image = getcustomasset("Shaman/RadioButton.png")
-radioButtonIcon2.AnchorPoint = Vector2.new(1, 0)
-radioButtonIcon2.ImageColor3 = Color3.fromRGB(191, 191, 191)
-radioButtonIcon2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-radioButtonIcon2.BackgroundTransparency = 1
-radioButtonIcon2.BorderSizePixel = 0
-radioButtonIcon2.Position = UDim2.new(0, 138, 0, 7)
-radioButtonIcon2.Size = UDim2.new(0, 13, 0, 13)
-radioButtonIcon2.Parent = button
-
-local radioContainer = Instance.new("Frame")
-radioContainer.Name = "RadioContainer"
-radioContainer.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-radioContainer.BackgroundTransparency = 1
-radioContainer.Size = UDim2.new(0, 162, 0, 27)
-radioContainer.Parent = radioButton
-radioContainer.ClipsDescendants = true
-
-local radioUILayout = Instance.new("UIListLayout")
-radioUILayout.Name = "RadioUILayout"
-radioUILayout.SortOrder = Enum.SortOrder.LayoutOrder
-radioUILayout.Parent = radioContainer
-
-local radiouIPadding = Instance.new("UIPadding")
-radiouIPadding.Name = "UIPadding"
-radiouIPadding.PaddingTop = UDim.new(0, 27)
-radiouIPadding.Parent = radioContainer
-
-local RadioSelected = nil
-
-function insideradio:Button(text)
-RadioYSize = RadioYSize + 27
-
-local radio = Instance.new("Frame")
-radio.Name = "Radio"
-radio.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-radio.BackgroundTransparency = 1
-radio.Size = UDim2.new(0, 162, 0, 27)
-radio.Parent = radioContainer
-
-local radioTextButton = Instance.new("TextButton")
-radioTextButton.Name = "RadioTextButton"
-radioTextButton.Font = Enum.Font.SourceSans
-radioTextButton.Text = ""
-radioTextButton.TextColor3 = Color3.fromRGB(0, 0, 0)
-radioTextButton.TextSize = 14
-radioTextButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-radioTextButton.BackgroundTransparency = 1
-radioTextButton.Size = UDim2.new(0, 162, 0, 27)
-radioTextButton.Parent = radio
-
-local radioOuter = Instance.new("ImageLabel")
-radioOuter.Name = "RadioOuter"
-radioOuter.Image = getcustomasset("Shaman/RadioOuter.png")
-radioOuter.ImageColor3 = Color3.fromRGB(191, 191, 191)
-radioOuter.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-radioOuter.BackgroundTransparency = 1
-radioOuter.BorderSizePixel = 0
-radioOuter.Position = UDim2.new(0.865, 0, 0.185, 0)
-radioOuter.Size = UDim2.new(0, 17, 0, 17)
-radioOuter.Parent = radio
-
-local radioInner = Instance.new("ImageLabel")
-radioInner.Name = "RadioInner"
-radioInner.Image = getcustomasset("Shaman/RadioInner.png")
-radioInner.AnchorPoint = Vector2.new(0.5, 0.5)
-radioInner.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-radioInner.BackgroundTransparency = 1
-radioInner.BorderSizePixel = 0
-radioInner.Position = UDim2.new(0.5, 0, 0.5, 0)
-radioInner.Size = UDim2.new(0, 7, 0, 7)
-radioInner.Parent = radioOuter
-
-ColorElements[radioInner] = {Type = "Toggle", Enabled = false}
-ColorElements[radioOuter] = {Type = "Toggle", Enabled = false}
-
-local radioText = Instance.new("TextLabel")
-radioText.Name = "RadioText"
-radioText.Font = Enum.Font.GothamBold
-radioText.Text = text
-radioText.TextColor3 = Color3.fromRGB(191, 191, 191)
-radioText.TextSize = 11
-radioText.TextXAlignment = Enum.TextXAlignment.Left
-radioText.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-radioText.BackgroundTransparency = 1
-radioText.Position = UDim2.new(0.0488, 0, 0, 0)
-radioText.Size = UDim2.new(0, 156, 0, 27)
-radioText.Parent = radio
-
-radio.MouseEnter:Connect(function()
-    if RadioOpened and RadioSelected ~= radio or RadioSelected == nil then
-    TweenService:Create(radioText, TweenInfo.new(.15, Enum.EasingStyle.Linear, Enum.EasingDirection.In), {TextColor3 = Color3.fromRGB(217, 217, 217)}):Play()
-    TweenService:Create(radioInner, TweenInfo.new(.15, Enum.EasingStyle.Linear, Enum.EasingDirection.In), {ImageColor3 = Color3.fromRGB(217, 217, 217)}):Play()
-    TweenService:Create(radioOuter, TweenInfo.new(.15, Enum.EasingStyle.Linear, Enum.EasingDirection.In), {ImageColor3 = Color3.fromRGB(217, 217, 217)}):Play()
-    end
-end)
-
-radio.MouseLeave:Connect(function()
-    if RadioOpened and RadioSelected ~= radio or RadioSelected == nil then
-    TweenService:Create(radioText, TweenInfo.new(.15, Enum.EasingStyle.Linear, Enum.EasingDirection.In), {TextColor3 = Color3.fromRGB(191, 191, 191)}):Play()
-    TweenService:Create(radioInner, TweenInfo.new(.15, Enum.EasingStyle.Linear, Enum.EasingDirection.In), {ImageColor3 = Color3.fromRGB(191, 191, 191)}):Play()
-    TweenService:Create(radioOuter, TweenInfo.new(.15, Enum.EasingStyle.Linear, Enum.EasingDirection.In), {ImageColor3 = Color3.fromRGB(191, 191, 191)}):Play()
-    end
-end)
-
-radioTextButton.MouseButton1Click:Connect(function()
-    task.spawn(function()
-        pcall(Info.Callback, radioText.Text)
-    end)
-    if Info.Flag ~= nil then
-        library.Flags[Info.Flag] = radioText.Text
-	end
-    
-    ColorElements[radioInner].Enabled = true
-    ColorElements[radioOuter].Enabled = true
-    
-    RadioSelected = radio
-    
-    for _,v in pairs(radioContainer:GetChildren()) do
-        if v.ClassName == "Frame" and v ~= radio then
-            ColorElements[v.RadioOuter].Enabled = false
-            ColorElements[v.RadioOuter.RadioInner].Enabled = false
-            TweenService:Create(v.RadioOuter, TweenInfo.new(.15, Enum.EasingStyle.Linear, Enum.EasingDirection.In), {ImageColor3 = Color3.fromRGB(191, 191, 191)}):Play()
-            TweenService:Create(v.RadioOuter.RadioInner, TweenInfo.new(.15, Enum.EasingStyle.Linear, Enum.EasingDirection.In), {ImageColor3 = Color3.fromRGB(191, 191, 191)}):Play()
-            TweenService:Create(v.RadioText, TweenInfo.new(.15, Enum.EasingStyle.Linear, Enum.EasingDirection.In), {TextColor3 = Color3.fromRGB(191, 191, 191)}):Play()
-        end
-    end
-    
-    TweenService:Create(radioText, TweenInfo.new(.15, Enum.EasingStyle.Linear, Enum.EasingDirection.In), {TextColor3 = Color3.fromRGB(255, 255, 255)}):Play()
-    
-    if not EditOpened then
-        TweenService:Create(radioInner, TweenInfo.new(.15, Enum.EasingStyle.Linear, Enum.EasingDirection.In), {ImageColor3 = RadioOpened and Color3.fromRGB(48, 207, 106) or Color3.fromRGB(191, 191, 191)}):Play()
-        TweenService:Create(radioOuter, TweenInfo.new(.15, Enum.EasingStyle.Linear, Enum.EasingDirection.In), {ImageColor3 = RadioOpened and Color3.fromRGB(48, 207, 106) or Color3.fromRGB(191, 191, 191)}):Play()
-    end
-end)
-
-end
-
-radioButtonTextButton.MouseButton1Click:Connect(function()
-    RadioOpened = not RadioOpened
-    
-    TweenService:Create(radioButtonIcon, TweenInfo.new(.15, Enum.EasingStyle.Linear, Enum.EasingDirection.In), {ImageColor3 = RadioOpened and Color3.fromRGB(255, 255, 255) or Color3.fromRGB(191, 191, 191)}):Play()
-    TweenService:Create(radioButtonIcon, TweenInfo.new(.15, Enum.EasingStyle.Linear, Enum.EasingDirection.In), {Rotation = RadioOpened and -180 or -90}):Play()
-    TweenService:Create(radioButtonIcon2, TweenInfo.new(.15, Enum.EasingStyle.Linear, Enum.EasingDirection.In), {ImageColor3 = RadioOpened and Color3.fromRGB(255, 255, 255) or Color3.fromRGB(191, 191, 191)}):Play()
-    TweenService:Create(radioButton, TweenInfo.new(.15, Enum.EasingStyle.Linear, Enum.EasingDirection.In), {Size = RadioOpened and UDim2.new(0, 162, 0, RadioYSize) or UDim2.new(0, 162, 0, 27)}):Play()
-    TweenService:Create(radioContainer, TweenInfo.new(.15, Enum.EasingStyle.Linear, Enum.EasingDirection.In), {Size = RadioOpened and UDim2.new(0, 162, 0, RadioYSize) or UDim2.new(0, 162, 0, 27)}):Play()
-    TweenService:Create(radioContainer, TweenInfo.new(.15, Enum.EasingStyle.Linear, Enum.EasingDirection.In), {BackgroundTransparency = RadioOpened and .96 or 1}):Play()
-    TweenService:Create(sectionFrame, TweenInfo.new(.15, Enum.EasingStyle.Linear, Enum.EasingDirection.In), {Size = RadioOpened and UDim2.new(0, 162, 0, sectionFrame.Size.Y.Offset + RadioYSize - 27) or UDim2.new(0, 162, 0, sectionFrame.Size.Y.Offset - RadioYSize + 27)}):Play()
-    TweenService:Create(section, TweenInfo.new(.15, Enum.EasingStyle.Linear, Enum.EasingDirection.In), {Size = RadioOpened and UDim2.new(0, 162, 0, sectionFrame.Size.Y.Offset + RadioYSize - 27 + 4) or UDim2.new(0, 162, 0, sectionFrame.Size.Y.Offset - RadioYSize + 31)}):Play()
-end)
-
-for _,v in pairs(Info.Options) do
-    insideradio:Button(v)
-end
-
-Closed:GetPropertyChangedSignal("Value"):Connect(function()
-    if not Closed.Value then
-    RadioOpened = false
-    
-    TweenService:Create(radioButtonIcon, TweenInfo.new(.15, Enum.EasingStyle.Linear, Enum.EasingDirection.In), {ImageColor3 = RadioOpened and Color3.fromRGB(255, 255, 255) or Color3.fromRGB(191, 191, 191)}):Play()
-    TweenService:Create(radioButtonIcon, TweenInfo.new(.15, Enum.EasingStyle.Linear, Enum.EasingDirection.In), {Rotation = RadioOpened and -180 or -90}):Play()
-    TweenService:Create(radioButtonIcon2, TweenInfo.new(.15, Enum.EasingStyle.Linear, Enum.EasingDirection.In), {ImageColor3 = RadioOpened and Color3.fromRGB(255, 255, 255) or Color3.fromRGB(191, 191, 191)}):Play()
-    TweenService:Create(radioButton, TweenInfo.new(.15, Enum.EasingStyle.Linear, Enum.EasingDirection.In), {Size = RadioOpened and UDim2.new(0, 162, 0, RadioYSize) or UDim2.new(0, 162, 0, 27)}):Play()
-    TweenService:Create(radioContainer, TweenInfo.new(.15, Enum.EasingStyle.Linear, Enum.EasingDirection.In), {Size = RadioOpened and UDim2.new(0, 162, 0, RadioYSize) or UDim2.new(0, 162, 0, 27)}):Play()
-    TweenService:Create(radioContainer, TweenInfo.new(.15, Enum.EasingStyle.Linear, Enum.EasingDirection.In), {BackgroundTransparency = RadioOpened and .96 or 1}):Play()
-    TweenService:Create(sectionFrame, TweenInfo.new(.15, Enum.EasingStyle.Linear, Enum.EasingDirection.In), {Size = RadioOpened and UDim2.new(0, 162, 0, sectionFrame.Size.Y.Offset + RadioYSize - 27) or UDim2.new(0, 162, 0, sectionFrame.Size.Y.Offset - RadioYSize + 27)}):Play()
-    TweenService:Create(section, TweenInfo.new(.15, Enum.EasingStyle.Linear, Enum.EasingDirection.In), {Size = RadioOpened and UDim2.new(0, 162, 0, sectionFrame.Size.Y.Offset + RadioYSize - 27 + 4) or UDim2.new(0, 162, 0, sectionFrame.Size.Y.Offset - RadioYSize + 31)}):Play()
-    end
-end)
-
-return insideradio
-end
-
-return sectiontable
-end
-
-tabTextButton.MouseButton1Click:Connect(function()
-    TabSelected = tabFrame
-    task.spawn(function()
-    for _,v in pairs(main:GetChildren()) do
-        if v.Name == "LeftContainer" or v.Name == "RightContainer" then
-            v.Visible = false
-        end
-    end
-    end)
-    for _,v in pairs(scrollingContainer:GetChildren()) do
-        if v ~= tabButton and v.Name == "TabButton" then
-            TweenService:Create(v.TabFrame, TweenInfo.new(.15, Enum.EasingStyle.Linear, Enum.EasingDirection.In), {BackgroundTransparency = .96}):Play()
-        end
-    end
-    TweenService:Create(tabFrame, TweenInfo.new(.15, Enum.EasingStyle.Linear, Enum.EasingDirection.In), {BackgroundTransparency = .85}):Play()
-    leftContainer.Visible = true
-    rightContainer.Visible = true
-end)
-
-function tab:Select()
-    TabSelected = tabFrame
-    task.spawn(function()
-    for _,v in pairs(main:GetChildren()) do
-        if v.Name == "LeftContainer" or v.Name == "RightContainer" then
-            v.Visible = false
-        end
-    end
-    end)
-    for _,v in pairs(scrollingContainer:GetChildren()) do
-        if v ~= tabButton and v.Name == "TabButton" then
-            TweenService:Create(v.TabFrame, TweenInfo.new(.15, Enum.EasingStyle.Linear, Enum.EasingDirection.In), {BackgroundTransparency = .96}):Play()
-        end
-    end
-    TweenService:Create(tabFrame, TweenInfo.new(.15, Enum.EasingStyle.Linear, Enum.EasingDirection.In), {BackgroundTransparency = .85}):Play()
-    leftContainer.Visible = true
-    rightContainer.Visible = true
-end
-
-return tab
-end
-
-local uIListLayout = Instance.new("UIListLayout")
-uIListLayout.Name = "UIListLayout"
-uIListLayout.SortOrder = Enum.SortOrder.LayoutOrder
-uIListLayout.Parent = scrollingContainer
-
-local uIPadding = Instance.new("UIPadding")
-uIPadding.Name = "UIPadding"
-uIPadding.Parent = scrollingContainer
-
-local frame2 = Instance.new("Frame")
-frame2.Name = "Frame"
-frame2.AnchorPoint = Vector2.new(1, 0.5)
-frame2.BackgroundColor3 = Color3.fromRGB(34, 34, 34)
-frame2.BorderSizePixel = 0
-frame2.Position = UDim2.new(1, 0, 0.501, 0)
-frame2.Size = UDim2.new(0, 1, 0, 284)
-frame2.Parent = tabContainer
-
-local uIStroke2 = Instance.new("UIStroke")
-uIStroke2.Name = "UIStroke"
-uIStroke2.Color = Color3.fromRGB(61, 61, 61)
-uIStroke2.Parent = main
-
-return window
-end
-
-return library
+    TweenService:Create(sectionFrame, TweenInfo.new(.15, Enum.EasingStyle.Linear, Enum.EasingDirection.In), {Size = DropdownOpened and UDim2.new(0, 162, 0,
